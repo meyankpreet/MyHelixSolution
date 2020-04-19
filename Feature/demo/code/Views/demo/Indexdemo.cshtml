@@ -1,0 +1,19 @@
+﻿@model MyHelixSolution.Feature.Demo.Models.Page
+@using Glass.Mapper.Sc.Web.Mvc
+@{
+    ViewBag.Title = "Indexdemo";
+}
+
+<h2>Indexdemo meyank</h2>
+
+@Model.Name
+@Model.Descripton
+@Model.Image.Src
+<h1>meyank</h1>
+@Html.Glass().RenderImage(x => x.Image, isEditable: true)
+
+
+@Html.Raw( Html.Glass().Editable(Model, t => t.Descripton))
+
+
+
